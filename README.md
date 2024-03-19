@@ -1,27 +1,42 @@
-# Form
+# Week 4 - Challenge 2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+## Formulario Angular & TypeScript
 
-## Development server
+Crea con Angular un formulario de tres pasos.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- En cada paso habrá un grupo de campos, y sólo se debe ver un paso a la vez.
+- Pon en cada paso un botón para navegar al siguiente y otro para navegar al anterior (en el primer paso no debe verse el botón de anterior).
+- En el tercer paso debe haber un botón "Acceder".
+- En cada paso, el botón para continuar al siguiente paso debe estar deshabilitado hasta que se rellenen todos los campos del paso.
 
-## Code scaffolding
+### Paso 1: Personal data
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Name
+- Last name
+- BirthDate (cuando el usuario introduzca la fecha, al lado de este campo debe aparecer su edad en años)
+- Gender (male/female/other/prefer not to mention) --> Radio button
+- Email
+- Desea recibir información de nuestra newsletter? --> Checkbox
 
-## Build
+### Paso 2: Access data
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Username
+- Password
+- Repeat password
+- Account type (personal/pro/business) --> Tiene que ser un select
 
-## Running unit tests
+### Paso 3: Confirmación
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- El usuario debe de ver todos los datos introducidos y confirmar que es correcto. Botón para confirmar.
 
-## Running end-to-end tests
+### Paso 4: Login
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Username
+- Password
 
-## Further help
+Si los datos son incorrectos, se debe de mostrar un mensaje de error.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Si son correctos, se le debe mostrar una pantalla con todos los datos introducidos en el formulario (sería como un cuarto paso).
+Contraer
+
+¡¡¡ Testar TODO !!!
