@@ -11,7 +11,7 @@ describe('AccessDataComponent', () => {
       imports: [AccessDataComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(AccessDataComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
