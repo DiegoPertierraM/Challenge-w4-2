@@ -13,3 +13,16 @@ body {
 ul {
   padding: 0;
 }
+
+button {
+  font-size: 0.9rem;
+  padding-block: 0.3rem;
+  margin-inline-end: 0.8rem;
+  cursor: pointer;
+  transition: 0.4s background-color;
+}
+
+button:hover {
+  color: white;
+  background-color: rgb(255, 104, 104);
+}

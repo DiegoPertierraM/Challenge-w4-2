@@ -1,7 +1,12 @@
 <form #form #ngForm="ngForm" (ngSubmit)="onSubmit()">
   <router-outlet />
   <fieldset>
-    <button type="submit" [routerLink]="['/access_data']">Enviar</button>
+    <button
+      type="submit"
+      [routerLink]="isCurrentPage() ? ['/access_data'] : ['/login']"
+    >
+      Enviar
+    </button>
     <button type="reset">Limpiar</button>
   </fieldset>
 </form>

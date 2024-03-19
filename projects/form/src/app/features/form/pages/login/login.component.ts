@@ -1,12 +1,27 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'isdi-login',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styles: `
+  .control {
+      padding: 0.5rem 0;
+    }
+    .control label {
+      display: flex;
+      flex-direction: column;
+    }
+    input {
+      padding-block: 0.3rem;
+      font-size: 0.9rem;
+    }
+    select {
+      padding-block: 0.3rem;
+      font-size: 0.9rem;
+    }
+  `,
 })
-export class LoginComponent {
-
-}
+export default class LoginComponent {}

@@ -1,7 +1,7 @@
 import { JsonPipe } from '@angular/common';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'isdi-form',
@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './form.component.css',
 })
 export class FormComponent implements OnInit {
+  constructor(private router: Router) {}
   @ViewChild('form', {
     static: true,
   })
@@ -30,7 +31,7 @@ export class FormComponent implements OnInit {
     console.log(this.ngForm.value);
   }
 
-  next() {
-    console.log('works');
+  isCurrentPage(): boolean {
+    return this.router.url === '/personal_data';
   }
 }
