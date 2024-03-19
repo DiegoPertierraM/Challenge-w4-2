@@ -1,1 +1,7 @@
-<p>form works!</p>
+<form #form #ngForm="ngForm" (ngSubmit)="onSubmit()">
+  <router-outlet />
+  <fieldset>
+    <button type="submit" [routerLink]="['/access_data']">Enviar</button>
+    <button type="reset">Limpiar</button>
+  </fieldset>
+</form>

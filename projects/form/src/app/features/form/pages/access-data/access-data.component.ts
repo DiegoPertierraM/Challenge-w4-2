@@ -1,12 +1,45 @@
-import { Component } from '@angular/core';
+import { JsonPipe } from '@angular/common';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'isdi-access-data',
   standalone: true,
-  imports: [],
+  imports: [FormsModule, JsonPipe, RouterModule],
   templateUrl: './access-data.component.html',
-  styleUrl: './access-data.component.css'
+  styles: `
+    .control {
+      padding: 0.5rem 0;
+    }
+    .control label {
+      display: flex;
+      flex-direction: column;
+    }
+    input {
+      padding-block: 0.3rem;
+      font-size: 0.9rem;
+    }
+    select {
+      padding-block: 0.3rem;
+      font-size: 0.9rem;
+    }
+  `,
 })
-export class AccessDataComponent {
-
+export default class AccessDataComponent implements OnInit {
+  @ViewChild('form', {
+    static: true,
+  })
+  form!: ElementRef;
+  @ViewChild('ngForm', {
+    static: true,
+  })
+  ngForm!: NgForm;
+  ngOnInit(): void {
+    console.dir(this.form.nativeElement);
+    console.dir(this.ngForm);
+  }
+  onSubmit() {
+    console.log(this.ngForm.value);
+  }
 }

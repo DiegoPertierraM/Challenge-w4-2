@@ -1,1 +1,41 @@
-<p>access-data works!</p>
+<button [routerLink]="['/personal_data']">Previous step</button>
+<fieldset>
+  <legend>Access Data</legend>
+  <div class="control">
+    <label>
+      <span>Username:</span>
+      <input type="text" name="username" ngModel required minlength="3" />
+    </label>
+    <br />
+    <!-- @if ( ngForm.form.controls["username"].touched &&
+    ngForm.form.controls["username"].invalid ) {
+    <p>Username is required</p>
+    } @if (ngForm.form.controls["username"].errors?.["required"]) {
+    <p>Username is required</p>
+    } @if (ngForm.form.controls["username"].errors?.["minlength"]) {
+    <p>Username is too short</p>
+    } -->
+  </div>
+  <div class="control">
+    <label>
+      <span>Password:</span>
+      <input type="password" name="password" ngModel />
+    </label>
+  </div>
+  <div class="control">
+    <label>
+      <span>Repeat your password:</span>
+      <input type="password" name="password" ngModel />
+    </label>
+  </div>
+  <div class="control">
+    <label>
+      <span>Account type:</span>
+      <select name="course" ngModel>
+        <option value="C1_Per">Personal</option>
+        <option value="C2_Pro">Pro</option>
+        <option value="C3_Bus">Business</option>
+      </select>
+    </label>
+  </div>
+</fieldset>
