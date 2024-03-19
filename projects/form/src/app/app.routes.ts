@@ -14,5 +14,10 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./features/form/pages/personal-data/personal-data.component'),
   },
+  {
+    path: 'login',
+    title: 'Log in',
+    loadComponent: () => import('./features/form/pages/login/login.component'),
+  },
   { path: '**', redirectTo: 'personal_data' },
 ];
