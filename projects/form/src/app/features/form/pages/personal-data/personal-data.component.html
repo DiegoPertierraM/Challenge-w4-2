@@ -1,1 +1,68 @@
-<p>personal-data works!</p>
+<fieldset>
+  <legend>Personal Data</legend>
+  <div class="control">
+    <label>
+      <span>Name:</span>
+      <input type="text" name="name" ngModel required minlength="3" />
+    </label>
+    <br />
+    @if ( ngForm.form.controls["name"].touched &&
+    ngForm.form.controls["name"].invalid ) {
+    <p>El nombre es required</p>
+    } @if (ngForm.form.controls["name"].errors?.["required"]) {
+    <p>El nombre es required</p>
+    } @if (ngForm.form.controls["name"].errors?.["minlength"]) {
+    <p>El nombre es demasiado corto</p>
+    }
+  </div>
+  <div class="control">
+    <label>
+      <span>Last name:</span>
+      <input type="text" name="name" ngModel required minlength="3" />
+    </label>
+    <br />
+    @if ( ngForm.form.controls["name"].touched &&
+    ngForm.form.controls["name"].invalid ) {
+    <p>El nombre es required</p>
+    } @if (ngForm.form.controls["name"].errors?.["required"]) {
+    <p>El nombre es required</p>
+    } @if (ngForm.form.controls["name"].errors?.["minlength"]) {
+    <p>El nombre es demasiado corto</p>
+    }
+  </div>
+  <div class="control">
+    <label>
+      <span>Birthdate:</span>
+      <input type="date" name="date" ngModel />
+    </label>
+  </div>
+  <legend>What gender do you identify with:</legend>
+  <div class="control radio">
+    <label>
+      <input type="radio" name="place" value="male" ngModel /> Male
+    </label>
+    <label>
+      <input type="radio" name="place" value="female" ngModel /> Female
+    </label>
+    <label>
+      <input type="radio" name="place" value="other" ngModel /> Other
+    </label>
+  </div>
+  <div class="control">
+    <label>
+      <span>Email:</span>
+      <input type="email" name="email" ngModel />
+    </label>
+  </div>
+  <legend>Do you wish to receive our newsletter?</legend>
+  <div class="control radio">
+    <label>
+      <input type="radio" name="place" value="true" ngModel /> Yes
+    </label>
+    <label>
+      <input type="radio" name="place" value="false" ngModel /> No
+    </label>
+  </div>
+</fieldset>
+
+<!-- [disabled]="ngForm.invalid" -->

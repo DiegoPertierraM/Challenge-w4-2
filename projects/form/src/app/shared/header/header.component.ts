@@ -12,7 +12,7 @@ import { Component, Input } from '@angular/core';
   `,
   styles: `
     :host {
-      background-color: #444444;
+      background-color: rgb(255, 104, 104);
       color: white;
       text-align: center;
     }
